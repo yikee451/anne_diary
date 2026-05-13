@@ -1,7 +1,28 @@
 import { motion, useReducedMotion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+
+const heroQuote = 'I can shake off everything as I write.';
 
 function HeroSection() {
   const reduceMotion = useReducedMotion();
+  const [typedQuote, setTypedQuote] = useState(reduceMotion ? heroQuote : '');
+
+  useEffect(() => {
+    if (reduceMotion) {
+      setTypedQuote(heroQuote);
+      return undefined;
+    }
+
+    setTypedQuote('');
+    let index = 0;
+    const timer = window.setInterval(() => {
+      index += 1;
+      setTypedQuote(heroQuote.slice(0, index));
+      if (index >= heroQuote.length) window.clearInterval(timer);
+    }, 48);
+
+    return () => window.clearInterval(timer);
+  }, [reduceMotion]);
 
   const enterAnnex = () => {
     document.getElementById('timeline')?.scrollIntoView({
@@ -19,7 +40,15 @@ function HeroSection() {
       <div className="paper-grain opacity-45" aria-hidden="true" />
       <div className="dust-field" aria-hidden="true">
         {Array.from({ length: 18 }).map((_, index) => (
-          <span key={index} style={{ '--i': index }} />
+          <span
+            key={index}
+            style={{
+              '--x': `${(index * 37) % 100}%`,
+              '--y': `${(index * 19) % 100}%`,
+              '--delay': `${index * -0.8}s`,
+              '--duration': `${9 + (index % 6) * 1.5}s`,
+            }}
+          />
         ))}
       </div>
 
@@ -40,8 +69,11 @@ function HeroSection() {
           initial={reduceMotion ? false : { opacity: 0 }}
           animate={reduceMotion ? undefined : { opacity: 1 }}
           transition={{ duration: 2, delay: 0.7 }}
+          aria-label={`“${heroQuote}”`}
         >
-          “I can shake off everything as I write.”
+          <span aria-hidden="true">“{typedQuote}</span>
+          <span className="type-caret" aria-hidden="true" />
+          <span aria-hidden="true">”</span>
         </motion.blockquote>
         <p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-stone-300 md:text-base">
           An atmospheric scroll through hiding, memory, and the narrowing of freedom during World War II.
