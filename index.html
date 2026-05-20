@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A student project about Anne Frank, her diary, and the Secret Annex."
+    >
+    <title>Anne Frank Student Project</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Anne Frank student project home">
+          <span class="brand-mark" aria-hidden="true">AF</span>
+          <span>Student Project</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#annex">Secret Annex</a>
+          <a href="#reflection">Reflection</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">History project · Anne Frank</p>
+          <h1 id="hero-title">Anne Frank: her life, diary, and the Secret Annex</h1>
+          <p class="hero-text">
+            A classroom-friendly introduction to Anne Frank's story, why her diary matters,
+            and what students can learn about discrimination, courage, and memory.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#overview">Start learning</a>
+            <a class="button secondary" href="#sources">View sources</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Illustration of a diary and hidden room">
+          <div class="paper-stack">
+            <span class="paper paper-one"></span>
+            <span class="paper paper-two"></span>
+            <span class="paper paper-three"></span>
+          </div>
+          <div class="diary-cover">
+            <span class="diary-label">Diary</span>
+            <span class="diary-line"></span>
+            <span class="diary-line short"></span>
+          </div>
+          <div class="room-window" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-grid" id="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2 id="overview-title">A student version of the story</h2>
+          <p>
+            This page is inspired by the structure of the Anne Frank House website, but the
+            writing, layout, and visuals are simplified for a school project.
+          </p>
+        </div>
+        <article class="info-card">
+          <span class="card-number">01</span>
+          <h3>Who was Anne?</h3>
+          <p>
+            Anne Frank was born in Frankfurt am Main in 1929. Her family later moved to
+            Amsterdam as antisemitism grew in Nazi Germany.
+          </p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">02</span>
+          <h3>Why the diary matters</h3>
+          <p>
+            Anne received a diary for her thirteenth birthday. While hiding, she wrote about
+            daily life, fear, hope, and her dream of becoming a writer.
+          </p>
+        </article>
+        <article class="info-card">
+          <span class="card-number">03</span>
+          <h3>What students can discuss</h3>
+          <p>
+            Her story helps students explore prejudice, the impact of war on young people,
+            and the responsibility to speak against hate.
+          </p>
+        </article>
+      </section>
+
+      <section class="feature-panel" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Timeline</p>
+          <h2 id="timeline-title">Key events</h2>
+          <p>Use the filters to focus on Anne's life, the diary, or the historical context.</p>
+        </div>
+
+        <div class="filter-group" aria-label="Timeline filters">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="life">Life</button>
+          <button class="filter-button" type="button" data-filter="diary">Diary</button>
+          <button class="filter-button" type="button" data-filter="history">History</button>
+        </div>
+
+        <ol class="timeline-list">
+          <li class="timeline-item" data-category="life">
+            <span class="year">1929</span>
+            <div>
+              <h3>Anne is born</h3>
+              <p>Anne Frank is born in Frankfurt am Main, Germany.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-category="history">
+            <span class="year">1940</span>
+            <div>
+              <h3>The Netherlands is invaded</h3>
+              <p>Nazi Germany invades the Netherlands, and anti-Jewish rules increase.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-category="diary">
+            <span class="year">1942</span>
+            <div>
+              <h3>Anne receives her diary</h3>
+              <p>She begins writing shortly before the family goes into hiding.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-category="life">
+            <span class="year">1942</span>
+            <div>
+              <h3>The Secret Annex</h3>
+              <p>The Frank family hides in a concealed space behind Otto Frank's business.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-category="history">
+            <span class="year">1944</span>
+            <div>
+              <h3>The hiding place is discovered</h3>
+              <p>The people in hiding are arrested on 4 August 1944.</p>
+            </div>
+          </li>
+          <li class="timeline-item" data-category="diary">
+            <span class="year">1947</span>
+            <div>
+              <h3>The diary is published</h3>
+              <p>Otto Frank helps publish Anne's writing after the war.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="split-section" id="annex" aria-labelledby="annex-title">
+        <div class="annex-map" aria-label="Simple Secret Annex diagram">
+          <div class="map-floor office">Office</div>
+          <div class="map-floor stairs">Stairs</div>
+          <div class="map-floor bookcase">Bookcase</div>
+          <div class="map-floor hidden">Hidden rooms</div>
+        </div>
+        <div>
+          <p class="eyebrow">Secret Annex</p>
+          <h2 id="annex-title">Life in hiding was quiet, crowded, and dangerous</h2>
+          <p>
+            Eight people eventually lived in the Secret Annex. During the day they had to be
+            very careful because workers were in the building below.
+          </p>
+          <div class="accordion" data-accordion>
+            <button type="button" class="accordion-trigger" aria-expanded="true">
+              What made daily life difficult?
+            </button>
+            <div class="accordion-panel">
+              <p>
+                The group had little privacy, limited movement, and constant fear of discovery.
+                Anne used writing to process what she saw and felt.
+              </p>
+            </div>
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              Who helped them?
+            </button>
+            <div class="accordion-panel" hidden>
+              <p>
+                Otto Frank's trusted helpers brought food, news, and support while taking great
+                personal risks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reflection-section" id="reflection" aria-labelledby="reflection-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Reflection</p>
+          <h2 id="reflection-title">Quick learning check</h2>
+          <p>Answer a question, then use the prompt for a class discussion or project notebook.</p>
+        </div>
+        <div class="quiz-card">
+          <h3>Question</h3>
+          <p>What did writing help Anne do while she was in hiding?</p>
+          <div class="quiz-options" role="group" aria-label="Quiz choices">
+            <button type="button" data-answer="wrong">Forget everything outside</button>
+            <button type="button" data-answer="correct">Express her thoughts and feelings</button>
+            <button type="button" data-answer="wrong">Send public news reports</button>
+          </div>
+          <p class="quiz-result" aria-live="polite"></p>
+        </div>
+        <div class="prompt-card">
+          <h3>Discussion prompt</h3>
+          <p>
+            How can a personal diary become historical evidence? Write three sentences using
+            one example from Anne's story.
+          </p>
+        </div>
+      </section>
+
+      <section class="sources-section" id="sources" aria-labelledby="sources-title">
+        <div>
+          <p class="eyebrow">Sources</p>
+          <h2 id="sources-title">Research notes</h2>
+          <p>
+            Built as an original student project. Facts were checked against Anne Frank House
+            educational pages.
+          </p>
+        </div>
+        <ul class="source-list">
+          <li>
+            <a href="https://www.annefrank.org/en/anne-frank/" rel="noreferrer">
+              Anne Frank House: Anne Frank topic page
+            </a>
+          </li>
+          <li>
+            <a href="https://www.annefrank.org/en/anne-frank/who-was-anne-frank/" rel="noreferrer">
+              Anne Frank House: Who was Anne Frank?
+            </a>
+          </li>
+          <li>
+            <a href="https://www.annefrank.org/en/anne-frank/diary/" rel="noreferrer">
+              Anne Frank House: The diary
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made for a student history project. This is not an official Anne Frank House page.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
